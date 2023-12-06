@@ -23,12 +23,12 @@ const VentaSchema = ({
 
     producto:{
         type: String,
-        required:[true, 'El correo es requirido']
+        required:[true, 'El  es Producto requirido']
     },
 
-    precio:{
-        type: String,
-        required:[true, 'El telefono es requirido']
+    precio_dolar:{
+        type: Number,
+        required:[true, 'El precio es requirido']
     },
 })
 

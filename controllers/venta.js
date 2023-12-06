@@ -28,12 +28,12 @@ const postVenta = async(req, res) => {
 }
 
 const putVenta = async(req, res) => {
-    const {_id, id, nombre, apellido, producto, precio} = req.body //Desesctructurar
+    const {_id, id, nombre, apellido, producto, precio_dolar} = req.body //Desesctructurar
     console.log(req.body)
     let mensaje = ''
     try {
         const venta = await Venta.findOneAndUpdate({_id: _id},
-        {id: id, nombre: nombre, apellido:apellido, producto:producto, precio:precio})
+        {id: id, nombre: nombre, apellido:apellido, producto:producto, precio_dolar:precio_dolar})
         mensaje = 'Actualización exitosa'
     } catch (error) {
         mensaje = error
